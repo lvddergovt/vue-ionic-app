@@ -19,7 +19,7 @@
   </base-layout>
 </template>
 
-<script lang="ts">
+<script>
 import { IonItem, IonList, IonImg, IonThumbnail, IonLabel } from "@ionic/vue";
 
 export default {

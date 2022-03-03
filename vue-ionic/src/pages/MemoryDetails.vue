@@ -8,7 +8,7 @@
   </base-layout>
 </template>
 
-<script lang="ts">
+<script>
 import {  } from "@ionic/vue";
 
 export default {

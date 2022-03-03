@@ -26,7 +26,7 @@ const store = createStore({
     };
   },
   getters: {
-    memories(state:any) {
+    memories(state) {
       return state.memories;
     }
   }
