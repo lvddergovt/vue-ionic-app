@@ -1,9 +1,9 @@
 <template>  
-	<base-layout pageTitle="Memory details" pageDefaultBackLink="/memories">
+	<base-layout :pageTitle="loadedMemory ? loadedMemory.title : 'Loading...'" pageDefaultBackLink="/memories">
 
-    <ion-content>
-      
-    </ion-content>
+    <h2 v-if="!loadedMemory">Could not find memory</h2>
+
+
 
   </base-layout>
 </template>
@@ -13,9 +13,25 @@ import {  } from "@ionic/vue";
 
 export default {
 
-components: {
-    
+  data() {
+    return {
+      memoryId: this.$route.params.id
+    }
   },
+
+  computed: {
+    loadedMemory() {
+      return this.$store.getters.memory(this.memoryId);
+    }
+  },
+
+  // only needed if id would change on detail page, which is not the case for now
+  // watch: {
+  //   '$route'(currentRoute) {
+  //     this.memoryId = currentRoute.params.id;
+  //   }
+  // }
+
 };
 
 </script>

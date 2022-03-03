@@ -28,6 +28,11 @@ const store = createStore({
   getters: {
     memories(state) {
       return state.memories;
+    },
+    memory(state) {
+      return (memoryId) => {
+        return state.memories.find(m => m.id === memoryId);
+      }
     }
   }
 });
