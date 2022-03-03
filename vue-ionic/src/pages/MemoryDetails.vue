@@ -3,8 +3,6 @@
 
     <h2 v-if="!loadedMemory">Could not find memory</h2>
 
-
-
   </base-layout>
 </template>
 
