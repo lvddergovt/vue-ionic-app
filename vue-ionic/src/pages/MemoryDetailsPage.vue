@@ -1,11 +1,14 @@
 <template>  
 	<base-layout :pageTitle="loadedMemory ? loadedMemory.title : 'Loading...'" pageDefaultBackLink="/memories">
 
-    <h2 v-if="!loadedMemory">Could not find memory</h2>
-    <memory-overview v-else 
-                     :title="loadedMemory.title"
-                     :image="loadedMemory.image"
-                     :description="loadedMemory.description"></memory-overview>
+	<h2 v-if="!loadedMemory">
+		Could not find memory
+	</h2>
+	
+	<memory-overview v-else 
+									 :title="loadedMemory.title"
+									 :image="loadedMemory.image"
+									 :description="loadedMemory.description"></memory-overview>
   </base-layout>
 </template>
 
